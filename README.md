@@ -4,25 +4,32 @@ A Sublime Text plugin for viewing default and user settings side by side in a
 new window. It also works for key bindings and plug-in specific settings, making
 it much easier to configure Sublime Text.
 
+
 ## Installation
-There are two options for installing this package:
 
-#### [Package Control](https://sublime.wbond.net/) (Recommended)
-Side-by-Side Settings is available via Package Control. If you do not have the
-Package Control plug-in installed in Sublime Text, you should!
-Simply follow [these instructions](https://sublime.wbond.net/installation) to
-install it. Once it has been installed, search for and select **Side-by-Side
-Settings** in the `Install Package` command window.
+### By Package Control
 
-#### Git Clone
-You can also clone this repository into your Sublime Text Packages directory
-using Git, if you feel so inclined. If you do use Git, make sure to clone using
-the appropriate folder name of **Side-by-Side Settings** (so that the menu items
-work as expected). Here's an example git clone command using SSH:
+1. Download & Install `Sublime Text 3` (https://www.sublimetext.com/3)
+1. Go to the menu `Tools -> Install Package Control`, then,
+   wait few seconds until the `Package Control` installation finishes
+1. Go to the menu `Preferences -> Package Control`
+1. Type `Package Control Add Channel` on the opened quick panel and press <kbd>Enter</kbd>
+1. Then, input the following address and press <kbd>Enter</kbd>
+   ```
+   https://raw.githubusercontent.com/evandrocoan/StudioChannel/master/channel.json
+   ```
+1. Now, go again to the menu `Preferences -> Package Control`
+1. This time type `Package Control Install Package` on the opened quick panel and press <kbd>Enter</kbd>
+1. Then, search for `SideBySideSettings` and press <kbd>Enter</kbd>
 
-`git clone git@github.com:jgbishop/sxs-settings.git "Side-by-Side Settings"`
+See also:
+1. [ITE - Integrated Toolset Environment](https://github.com/evandrocoan/ITE)
+1. [Package control docs](https://packagecontrol.io/docs/usage) for details.
+
 
 ## Usage
+
+`{ "keys": ["ctrl+k", "ctrl+s"], "command": "sxs_settings" }`
 
 Side-by-Side Settings adds three new commands to the command palette:
 
@@ -32,7 +39,7 @@ Side-by-Side Settings adds three new commands to the command palette:
 
 #### Select a File Command
 
-The "select a file" command opens a quick panel that displays all of the 
+The "select a file" command opens a quick panel that displays all of the
 `.sublime-settings` and `.sublime-keymap` files that Sublime Text knows about
 (note that files located in the `Packages/User` directory are filtered out of
 this list; more on why it does this in a second). When a file in the quick panel
@@ -61,11 +68,11 @@ the internal command names to use:
 
 Here's an example key binding:
 
-`{ "keys": ["ctrl+k", "ctrl+p"], "command": "sxs_settings" }`
+`{ "keys": ["ctrl+k", "ctrl+s"], "command": "sxs_settings" }`
 
 ## Plug-in Settings
 
-Side-by-Side Settings currently supports the following plug-in specific 
+Side-by-Side Settings currently supports the following plug-in specific
 settings:
 
 **filter_platform**: When enabled, platform specific files that do not match
